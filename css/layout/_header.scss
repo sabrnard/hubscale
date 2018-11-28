@@ -1,0 +1,259 @@
+
+///////// v.MOBILE ////////
+
+/* Barre navigation */
+.header-tablet{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 82px;
+    padding: 20px;
+    z-index:30;
+    img{
+        width: 170px;
+    }
+    .button{
+        display: none;
+    }
+}
+
+// Burger //
+
+.burger {
+    display: flex;
+    width:35px;
+    height: 35px;
+    cursor: pointer;
+    top:20px;
+    right:20px;
+    z-index: 3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s all cubic-bezier(.68,-.55,.265,1.55);
+   }
+   
+   .burger span{
+       width: 70%;
+       height: 2px;
+       border-radius: 2px;
+       background: #12dabd;
+       margin: 2px;
+       transition: .5s all cubic-bezier(.68,-.55,.265,1.55);
+   }
+
+/* Menu */
+nav {
+    background-color:white;
+    width: 100%;
+    height:0px ;
+    position: fixed;
+    top:82px;
+    left:0;
+    z-index:20;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    img{
+        display: none;
+    }
+    a {
+        color: $greyColor;
+        font-size: 14px;
+        display: block;
+        padding: 20px;
+        font-family: Lato;
+        text-decoration: none;
+        text-align: center;
+        &:hover{
+            color:$blueColor;
+        }
+        &.button{
+        font-size: 12px;
+        }
+     } 
+     &.active{
+         height: 400px;
+     } 
+
+     
+}
+
+// Header
+
+header{
+    width: 100%;
+    min-height:450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top:82px;
+    overflow: hidden;
+    video{
+        position: absolute;
+        top:0;
+        left:0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -10;
+        }
+    .txt-container{
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+        padding: 20px; 
+    }
+    .button{
+        padding-top: 20px;
+    }
+    &:after{
+        content:"";
+        background: rgba(0,0,0,0.4);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+}
+
+////////////// TABLET ////////////////////
+
+@media (min-width: 640px) {
+
+// Header tablet
+.header-tablet{
+    .button{
+        display: initial;
+        font-size: 12px;
+     }
+}
+
+// Burger //
+.burger {
+    margin-left: auto;
+    margin-right: 10px;
+   }
+
+/* Menu */
+nav {
+    .button{
+     display: none;
+     }
+  } 
+
+// Header
+
+header{
+    min-height:700px;
+    .txt-container{
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        width:80%;
+        h1{
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+        h2{
+            font-size: 24px;
+        }
+    }
+    .button{
+        padding-top: 20px;
+    }
+    &:after{
+        content:"";
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+}
+
+///////////////////DESKTOP/////////////////////
+
+@media (min-width: 990px) {
+
+    // Header tablet
+    .header-tablet{
+        .button{
+            display: initial;
+            font-size: 12px;
+         }
+    }
+    
+    // Burger //
+    .burger {
+        display:none;
+       }
+     
+    /* Menu */
+    nav {
+    width: 100%;
+    height:100px;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:30;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+        img{
+        display: initial;
+        width: 200px;
+        height: auto;
+        }
+        a {
+        display: inline-block;
+        padding: 20px;
+        font-size: 16px;
+            &:hover{
+            color:$blueColor;
+            }
+        }
+        .button{
+        display: inline-block;
+            a:hover{
+            color:white;
+            }
+        }
+        &.active{
+        height: 100px;
+         } 
+    }
+      
+    // Header
+    
+    header{
+        min-height:700px;
+        .txt-container{
+            text-align: left;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            width:80%;
+            h1{
+                font-size: 60px;
+                font-weight: 800;
+            }
+        }
+    }
+    }

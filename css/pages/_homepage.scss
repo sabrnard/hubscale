@@ -1,0 +1,147 @@
+main{
+    .wrapper{
+        padding: 0 25px;
+        @media (min-width: 990px){
+            max-width:1108px;
+            margin: 0 auto;
+        }
+        .resume{
+            padding: 60px 0;
+            text-align: center;
+            @media (min-width: 640px){
+                font-size: 26px;
+            }
+            @media (min-width: 990px){
+                font-size: 32px;
+            }
+        }
+        .sections-container{
+            @media (min-width: 640px){
+                img{
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+                h3{
+                    font-size: 26px;
+                }
+            }
+            @media (min-width: 990px){
+                margin: 0 auto;
+                section{
+                    display: flex;
+                    padding: 30px;
+                    div{
+                        width:50%;
+                        padding: 0 10px;
+                        h3{
+                            font-size: 32px;
+                        }
+                    }
+                    
+                }
+                .ua-central{
+                    .ua-central-img{
+                        order:1;
+                    }
+                }
+                .ua-authority{
+                    .ua-authority-img{
+                        order:1;
+                    }
+                }
+            }
+        }
+        .ua-instant{
+            padding-bottom: 75px;
+        }
+        img{
+            padding: 0 30px;
+            @media (min-width: 990px){
+                padding: 0;
+            }
+        }
+    }
+    // BLUE BOX
+        .bluebox{
+            width: 100%;
+            background: $blueColor;
+            text-align: center;
+            padding: 45px 0;
+            @media (min-width: 640px){
+                padding: 60px 0; 
+            }
+            img{
+                margin: 0 auto;
+            }
+            h2{
+            // padding-bottom: 40px;
+            @media (min-width: 640px){
+               font-size: 32px; 
+               padding: 40px;
+            }
+            }
+        }
+        // ABOUT US
+        .about-us{
+            .wrapper{
+                padding-top:50px;
+                @media (min-width: 990px){
+                    display: flex;
+                    align-items: flex-start;
+                    }
+                .txt{
+                    width: 80%;
+                    padding-right: 40px;
+                }
+                }
+            }
+            .button{
+                margin: 40px 0;
+             }
+            .about-us-img{
+                display: none;
+                @media (min-width: 990px){
+                    display: initial;
+                    padding:10px;
+                    img{
+                        width: 100%;
+                        height: 350px;
+                        object-fit: cover;
+                    }
+                    h6{
+                        height: 60px;
+                        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 1.2px;
+                        color: #9193aa;
+                        text-transform: uppercase;
+                        padding-top: 20px;
+                        padding-left: 20px;
+                        border-radius: 5px;
+                    }
+                }
+             }
+             @media (min-width: 640px){
+                h3{
+                    font-size: 26px;;
+                }  
+            }
+            }
+            
+         
+        .partners{
+            background-color:#F0F0F2;
+            padding: 60px 0 100px;
+            h4{
+                color: #9193aa;
+                text-align: center;
+            }
+        .partners-logo{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
